@@ -68,51 +68,11 @@
         </div>
         <!-- navigation end -->
 
-        <div id="fullpage">
-            <!-- section home start -->
-            <div class="section overlay overlay-dark-60" id="section0">
-                <!-- vertical lines start -->
-                <div class="vertical-lines-wrapper fadeIn-element">
-                    <div class="vertical-lines"></div>
-                </div><!-- vertical lines end -->
-                <!-- section title start -->
-                <div class="section-title section-title-home fadeIn-element">
-                    <div class="section-title-heading section-title-heading-home">
-                        VividArt Studios
-                    </div>
-                </div><!-- section title end -->
-
-                <div class="section-bg-home"></div>
-                <div class="bottom-credits fadeIn-element">
-                    <a class="link-underline-home" href="#">VividArt Studios</a> &copy;
-                    <!-- current year -->
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    All Rights Reserved.
-
-                </div>
-                <div class="social-icons-wrapper fadeIn-element">
-                    <p>
-                        Created by team:
-                    </p>
-                </div>
-
-                <div class="scroll-indicator fadeIn-element">
-                    <div class="scroll-indicator-wrapper">
-                        <div class="scroll-line"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- section home end -->
-
-
-
             <!-- section upload start -->
             <div class="section" id="app">
                 <div class="section-title section-title-left">
                     <div class="section-title-heading">
-                        Editor
+                        Upload Done
                     </div>
                 </div>
                 <!-- container start -->
@@ -126,11 +86,11 @@
                                         <div class="contact-content contact-content-light">
                                             <div class="contact-content-inner">
                                                 <h2 class="section-subheading section-subheading-about section-subheading-dark">
-                                                    <span>Upload and Transform</span>
+                                                    <span>Upload Done</span>
                                                 </h2>
                                                 <div class="inner-divider-half"></div>
                                                 <h2 class="section-heading section-heading-about section-heading-dark">
-                                                    Capture the Vivid Moments.
+                                                    Upload Successful
                                                 </h2>
                                                 <div class="inner-divider"></div>
                                                 <div class="contact-txt contact-txt-dark">
@@ -138,16 +98,6 @@
                                                         Unleash the full potential of your images with dynamic filters and collaborative features, curated to bring your artistic vision to life.
                                                     </p>
 
-                                                </div>
-                                                <div class="inner-divider"></div>
-                                                <div class="contact-txt contact-txt-dark">
-
-                                                    <div class="inner-divider"></div>
-                                                    <div class="contact-modal-launcher-wrapper">
-                                                        <div class="the-button contact-modal-launcher">
-                                                            Click Here
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -164,44 +114,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="contact-modal">
-                    <div class="container">
-                        <div class="center-container-contact-modal">
-                            <div class="center-block-contact-modal">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="contact-content-inner-modal">
-                                            <div id="contact-form">
-                                                <form action="/" method="post" enctype="multipart/form-data">
-
-                                                    <input type="file" name="file-to-save"/>
-                                                    <div class="contact-form-submit-wrapper">
-                                                        <button class="the-button the-button-light" id="submit" type="submit"><span>Submit</span></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="inner-divider"></div>
-                                            <div class="contact-modal-closer">
-                                                <span class="ion-close"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {% for file in files %}
-        <div>{{ file.original_filename }} - <a
-                href="https://{{ file.bucket }}.s3.{{ file.region }}.amazonaws.com/{{ file.filename }}">{{ file.filename
-            }}</a></div>
-        {% endfor %}
-
-
 
         <!-- scripts start -->
         <script src="{{ url_for('static', filename='js/plugins.js') }}">
